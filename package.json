@@ -1,6 +1,6 @@
 {
 	"name": "n8n-nodes-pdf-page-extract-next",
-	"version": "0.1.0",
+	"version": "1.0.0",
 	"description": "n8n node for extracting text from PDF pages along with images",
 	"license": "MIT",
 	"homepage": "https://github.com/arslanmughal99/n8n-nodes-pdf-page-extract-next",
