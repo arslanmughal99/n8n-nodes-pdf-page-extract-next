@@ -96,6 +96,6 @@ jobs:
       - name: Release
         run: |
           [ -n "$NPM_TOKEN" ] && pnpm config set //registry.npmjs.org/:_authToken "$NPM_TOKEN"
-          pnpm run release -- --access public
+          pnpm run release
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

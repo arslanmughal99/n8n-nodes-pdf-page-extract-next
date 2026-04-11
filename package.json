@@ -19,6 +19,10 @@
 		"type": "git",
 		"url": "https://github.com/arslanmughal99/n8n-nodes-pdf-page-extract-next"
 	},
+	"publishConfig": {
+		"access": "public",
+		"provenance": true
+	},
 	"scripts": {
 		"build": "n8n-node build",
 		"build:watch": "tsc --watch",
