@@ -71,6 +71,9 @@ jobs:
   publish:
     name: Publish to npm
     runs-on: ubuntu-latest
+    env:
+      # This line silences the warning and uses the newer Node version
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     permissions:
       # Required to mint an OIDC token for npm provenance attestation.
