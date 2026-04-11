@@ -58,10 +58,14 @@ name: Publish
 
 on:
   push:
-    tags:
-      # Matches 0.1.0, 1.2.3, 2.0.0-rc.1, etc.
-      # See "TAG CONVENTION" above if you prefer tags with a "v" prefix.
-      - '*.*.*'
+    branches:
+      - 'master'
+# on:
+# push:
+#   tags:
+#     # Matches 0.1.0, 1.2.3, 2.0.0-rc.1, etc.
+#     # See "TAG CONVENTION" above if you prefer tags with a "v" prefix.
+#     - '*.*.*'
 
 jobs:
   publish:
