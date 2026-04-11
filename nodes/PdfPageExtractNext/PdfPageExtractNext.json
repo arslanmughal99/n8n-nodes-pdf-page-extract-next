@@ -1,7 +1,7 @@
 {
 	"node": "n8n-nodes-pdf-page-extract-next",
-	"nodeVersion": "1.0",
-	"codexVersion": "1.0",
+	"nodeVersion": "1.0.1",
+	"codexVersion": "1.0.0",
 	"categories": ["Development", "Developer Tools"],
 	"resources": {
 		"credentialDocumentation": [],
