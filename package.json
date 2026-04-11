@@ -1,0 +1,54 @@
+{
+	"name": "n8n-nodes-pdf-page-extract-next",
+	"version": "1.0.0",
+	"description": "n8n node for extracting text from PDF pages along with images",
+	"license": "MIT",
+	"homepage": "https://github.com/arslanmughal99/n8n-nodes-pdf-page-extract-next",
+	"keywords": [
+		"n8n-community-node-package",
+		"pdf",
+		"pdf-parse",
+		"pdf-page-extract",
+		"pdf-image-extract"
+	],
+	"author": {
+		"name": "Arsalan Mughal",
+		"email": "arsalan.mughal5566@gmail.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/arslanmughal99/n8n-nodes-pdf-page-extract-next"
+	},
+	"scripts": {
+		"build": "n8n-node build",
+		"build:watch": "tsc --watch",
+		"dev": "n8n-node dev",
+		"lint": "n8n-node lint",
+		"lint:fix": "n8n-node lint --fix",
+		"release": "n8n-node release",
+		"prepublishOnly": "n8n-node prerelease"
+	},
+	"files": [
+		"dist"
+	],
+	"n8n": {
+		"n8nNodesApiVersion": 1,
+		"strict": false,
+		"nodes": [
+			"dist/nodes/PdfPageExtractNext/PdfPageExtractNext.js"
+		]
+	},
+	"devDependencies": {
+		"@n8n/node-cli": "*",
+		"eslint": "9.39.4",
+		"prettier": "3.8.1",
+		"release-it": "19.2.4",
+		"typescript": "5.9.3"
+	},
+	"peerDependencies": {
+		"n8n-workflow": "*"
+	},
+	"dependencies": {
+		"pdf-parse": "^2.4.5"
+	}
+}
