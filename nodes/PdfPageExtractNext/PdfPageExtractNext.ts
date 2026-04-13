@@ -89,20 +89,27 @@ export class PdfPageExtractNext implements INodeType {
 				const imageTimeout = this.getNodeParameter('imageTimeout', i) as number;
 				const pageNumber = this.getNodeParameter('pageNumber', i) as number;
 
-				if (!items[i].binary) {
-					throw new NodeOperationError(this.getNode(), 'No binary data exists on item!');
-				}
+				// if (!items[i].binary) {
+				// 	throw new NodeOperationError(this.getNode(), 'No binary data exists on item!');
+				// }
 
-				const binaryData = items[i].binary as Record<
-					string,
-					{ data: string; fileName?: string; mimeType?: string }
-				>;
+				// const binaryData = items[i].binary as Record<
+				// 	string,
+				// 	{ data: string; fileName?: string; mimeType?: string }
+				// >;
 
-				if (!binaryData[binaryPropertyName]) {
-					throw new NodeOperationError(
-						this.getNode(),
-						`Binary data property "${binaryPropertyName}" does not exist on item!`,
-					);
+				// if (!binaryData[binaryPropertyName]) {
+				// 	throw new NodeOperationError(
+				// 		this.getNode(),
+				// 		`Binary data property "${binaryPropertyName}" does not exist on item!`,
+				// 	);
+				// }
+				if (!items[i].binary?.[binaryPropertyName]) {
+					returnData.push({
+						json: { pageNumber: 0, text: '' },
+						binary: {},
+					});
+					continue;
 				}
 
 				const buffer = await this.helpers.getBinaryDataBuffer(i, binaryPropertyName);
